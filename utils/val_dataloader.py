@@ -39,7 +39,7 @@ def get_comic_val_dataloader(path='./dataset/Comic Books', batch_size=100, image
     valdir = os.path.join(path, 'test')
     return __get_val_dataloader(valdir, batch_size, image_size)
 
-def get_flower_val_dataloader(path='./dataset/Oxford 102 Flower', batch_size=100, image_size=224):
+def get_flower_val_dataloader(path='./dataset/Oxford 102 Flower/flower_data', batch_size=100, image_size=224):
     valdir = os.path.join(path, 'valid')
     return __get_val_dataloader(valdir, batch_size, image_size)
 

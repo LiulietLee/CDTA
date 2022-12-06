@@ -15,6 +15,21 @@ Download target classifiers trained on [BIRDS-400](https://github.com/LiulietLee
 
 Download the [per-trained feature extractor](https://github.com/LiulietLee/CDTA/releases/download/v1.0/simsiam_bs256_100ep_cst.tar) and put the tar file in the `./pretrained/surrogate` directory.
 
+## Evaluation
+
+```
+python eval_cdta.py \
+  -d '[dataset]' \
+  -a '[target classifier]' \
+  --pretrained './pretrained/surrogate/simsiam_bs256_100ep_cst.tar' \
+  --eps 0.06274509803921569 \
+  --nb-iter 30 \
+  --step-size 0.01568627450980392
+```
+
+- `[dataset]` can be `BIRDS-400`, `Food-101`, `Comic Books`, or `Oxford 102 Flower`. 
+- `[target classifier]` can be `resnet34`, `densenet161`, `inception_v3`, or `vgg16_bn`.
+
 ## Train feature extractor
 
 ```
@@ -29,18 +44,3 @@ python main_simsiam.py \
   --fix-pred-lr \
   '[ImageNet path]'
 ```
-
-## Evaluation
-
-```
-python eval_cdta.py \
-  -d '[dataset]' \
-  -a '[target classifier]' \
-  --pretrained './pretrained/surrogate/simsiam_bs256_100ep_cst.tar' \
-  --eps 0.06274509803921569 \
-  --nb-iter 30 \
-  --alpha 0.01568627450980392
-```
-
-- `[dataset]` can be `BIRDS-400`, `Food-101`, `Comic Books`, or `Oxford 102 Flower`. 
-- `[target classifier]` can be `resnet34`, `densenet161`, `inception_v3`, or `vgg16_bn`.

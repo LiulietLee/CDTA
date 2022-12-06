@@ -52,7 +52,7 @@ class CDTAttack():
             loss1 = self.mid_layer_loss(self.enc.net.feature1, yvar[0])
             loss2 = self.mid_layer_loss(self.enc.net.feature2, yvar[1])
             loss3 = self.mid_layer_loss(self.enc.net.feature3, yvar[2])
-            loss4 = cos(outputs, yvar[3])
+            loss4 = cos(outputs, yvar[3]).mean()
             loss = loss1 + loss2 + loss3 + loss4
 
             loss.backward()
