@@ -77,7 +77,7 @@ def enc_attack_test(dataset, arch, device, adversary, bs):
     
 def main():
     args = parser.parse_args()
-    # print(args)
+    print(args)
 
     device = torch.device(f'cuda:{args.gpu}')
     

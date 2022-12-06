@@ -30,6 +30,12 @@ python eval_cdta.py \
 - `[dataset]` can be `BIRDS-400`, `Food-101`, `Comic Books`, or `Oxford 102 Flower`. 
 - `[target classifier]` can be `resnet34`, `densenet161`, `inception_v3`, or `vgg16_bn`.
 
+Or use `eval.sh` to test all target models.
+
+```
+bash ./eval.sh
+```
+
 ## Train feature extractor
 
 ```
