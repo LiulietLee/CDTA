@@ -5,11 +5,11 @@
 
 ### Datasets
 
-Download [BIRDS-400](https://github.com/LiulietLee/CDTA/releases/download/v1.1/BIRDS-400.zip), [Food-101](http://data.vision.ee.ethz.ch/cvl/food-101.tar.gz), [Comic Books](https://www.kaggle.com/datasets/cenkbircanoglu/comic-books-classification), and [Oxford 102 Flower](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/) datasets. Extract them to the `./dataset` directory.
+Download [birds-400](https://github.com/LiulietLee/CDTA/releases/download/v1.1/birds-400.zip), [food-101](http://data.vision.ee.ethz.ch/cvl/food-101.tar.gz), [comic books](https://www.kaggle.com/datasets/cenkbircanoglu/comic-books-classification), and [oxford 102 flower](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/) datasets. Extract them to the `./dataset` directory.
 
 ### Pre-trained target classifiers
 
-Download target classifiers trained on [BIRDS-400](https://github.com/LiulietLee/CDTA/releases/download/v1.0/BIRDS-400.zip), [Food-101](https://github.com/LiulietLee/CDTA/releases/download/v1.0/Food-101.zip), [Comic Books](https://github.com/LiulietLee/CDTA/releases/download/v1.0/Comic.Books.zip), and [Oxford 102 Flower](https://github.com/LiulietLee/CDTA/releases/download/v1.0/Oxford.102.Flower.zip). Extract them to the `./pretrained/target` directory.
+Download target classifiers trained on [birds-400](https://github.com/LiulietLee/CDTA/releases/download/v1.0/birds-400.zip), [food-101](https://github.com/LiulietLee/CDTA/releases/download/v1.0/food-101.zip), [comic books](https://github.com/LiulietLee/CDTA/releases/download/v1.0/Comic.Books.zip), and [oxford 102 flower](https://github.com/LiulietLee/CDTA/releases/download/v1.0/Oxford.102.Flower.zip). Extract them to the `./pretrained/target` directory.
 
 ### Pre-trained feature extractor
 
@@ -27,7 +27,7 @@ python eval_cdta.py \
   --step-size 0.01568627450980392
 ```
 
-- `[dataset]` can be `BIRDS-400`, `Food-101`, `Comic Books`, or `Oxford 102 Flower`. 
+- `[dataset]` can be `birds-400`, `food-101`, `comic books`, or `oxford 102 flower`. 
 - `[target classifier]` can be `resnet34`, `densenet161`, `inception_v3`, or `vgg16_bn`.
 
 Or use `eval.sh` to test all target models.

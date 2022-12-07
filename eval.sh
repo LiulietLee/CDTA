@@ -1,5 +1,5 @@
 models=('resnet34' 'inception_v3' 'densenet161' 'vgg16_bn')
-datasets=('BIRDS-400' 'Food-101' 'Comic Books' 'Oxford 102 Flower')
+datasets=('birds-400' 'food-101' 'comic books' 'oxford 102 flower')
 
 for ((j = 0; j < ${#datasets[@]}; j++)) do
     for ((i = 0; i < ${#models[@]}; i++)) do

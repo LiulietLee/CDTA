@@ -35,15 +35,15 @@ def __get_val_dataloader(valdir, batch_size, image_size):
     
     return val_loader
     
-def get_comic_val_dataloader(path='./dataset/Comic Books', batch_size=100, image_size=224):
+def get_comic_val_dataloader(path='./dataset/comic books', batch_size=100, image_size=224):
     valdir = os.path.join(path, 'test')
     return __get_val_dataloader(valdir, batch_size, image_size)
 
-def get_flower_val_dataloader(path='./dataset/Oxford 102 Flower/flower_data', batch_size=100, image_size=224):
+def get_flower_val_dataloader(path='./dataset/oxford 102 flower/flower_data', batch_size=100, image_size=224):
     valdir = os.path.join(path, 'valid')
     return __get_val_dataloader(valdir, batch_size, image_size)
 
-def get_bird_val_dataloader(path='./dataset/BIRDS-400', batch_size=100, image_size=224):
+def get_bird_val_dataloader(path='./dataset/birds-400', batch_size=100, image_size=224):
     valdir = os.path.join(path, 'test')
     return __get_val_dataloader(valdir, batch_size, image_size)
 
@@ -68,14 +68,14 @@ def get_food_val_dataloader(root='./dataset', batch_size=100, image_size=224):
     return test_loader
 
 def get_val_dataloader(name, batch_size=100, image_size=224):
-    assert name in ['BIRDS-400', 'Comic Books', 'Food-101', 'Oxford 102 Flower'], print(name)
+    assert name in ['birds-400', 'comic books', 'food-101', 'oxford 102 flower'], print(name)
     
-    if name == 'Comic Books':
+    if name == 'comic books':
         return get_comic_val_dataloader(batch_size=batch_size, image_size=image_size)
-    elif name == 'Oxford 102 Flower':
+    elif name == 'oxford 102 flower':
         return get_flower_val_dataloader(batch_size=batch_size, image_size=image_size)
-    elif name == 'BIRDS-400':
+    elif name == 'birds-400':
         return get_bird_val_dataloader(batch_size=batch_size, image_size=image_size)
-    elif name == 'Food-101':
+    elif name == 'food-101':
         return get_food_val_dataloader(batch_size=batch_size, image_size=image_size)
 
