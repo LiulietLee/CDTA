@@ -240,12 +240,7 @@ class ResNet(nn.Module):
         self.feature2_flatten = torch.flatten(self.avg2(self.feature2), 1)
         self.feature3_flatten = torch.flatten(self.avg3(self.feature3), 1)
         self.feature4_flatten = torch.flatten(self.avgpool(self.feature4), 1)
-        
-        self.mid_layer_outs = [self.feature1, self.feature2, self.feature3, self.feature4]
-        self.features = [
-            self.feature1_flatten, self.feature2_flatten, self.feature3_flatten, self.feature4_flatten
-        ]
-        
+                
         y = self.fc(self.feature4_flatten)
 
         return y

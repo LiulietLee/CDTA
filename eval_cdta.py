@@ -72,8 +72,7 @@ def enc_attack_test(dataset, arch, device, adversary, bs):
 
     asr = 1 - acc_adv / tot_adv
     acc = acc / tot
-    print(f'{dataset} - {arch}')
-    print(f' ASR = {asr * 100:.2f}%')
+    print(f'{dataset} - {arch}: ASR = {asr * 100:.2f}%')
     
 def main():
     args = parser.parse_args()

@@ -1,5 +1,6 @@
 Put the target classifier folders here.
 
+```
 .
 └── target/
     ├── birds-400/
@@ -13,3 +14,4 @@ Put the target classifier folders here.
     │   └── ...
     └── oxford 102 flower/
         └── ...
+```

@@ -4,13 +4,6 @@ import torchvision.models as models
 import utils.aresnet as aresnet
 
 
-class Identity(nn.Module):
-    def __init__(self):
-        super(Identity, self).__init__()
-        
-    def forward(self, x):
-        return x
-    
 class AttackEncoder(nn.Module):
         
     def __init__(self, ckpt_path):
@@ -32,7 +25,7 @@ class AttackEncoder(nn.Module):
         else:
             model.load_state_dict(checkpoint)
         
-        model.fc = Identity()
+        model.fc = nn.Identity()
         self.net = model
         
     def forward(self, x):
