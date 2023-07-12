@@ -1,6 +1,8 @@
 # CDTA
 > Release for CDTA: Cross-Domain Transfer-Based Attack with Contrastive Learning [AAAI23]
 
+Paper Link: [https://ojs.aaai.org/index.php/AAAI/article/view/25239](https://ojs.aaai.org/index.php/AAAI/article/view/25239)
+
 ## Download
 
 ### Datasets
