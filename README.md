@@ -45,7 +45,7 @@ cd cst
 ```
 
 ```
-python main_simsiam.py \
+python train.py \
   -a resnet50 \
   -b 256 \
   --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 \
